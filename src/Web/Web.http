@@ -1,0 +1,27 @@
+﻿# For more info on HTTP files go to https://aka.ms/vs/httpfile
+@Web_HostAddress = https://localhost:5001
+
+# POST RobotCleaning
+POST {{Web_HostAddress}}/api/RobotMissions
+Content-Type: application/json
+
+// CreateRobotMissionCommand
+{
+  "start": 
+  {
+    "x": 10,
+    "y": 22
+  },
+  "commmands": 
+  [
+    {
+      "direction": "east",
+      "steps": 2
+     },
+    {
+      "direction": "north",
+      "steps": 1
+     }
+  ]
+}
+###
