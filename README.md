@@ -1,4 +1,54 @@
 ﻿# RoboSimulator
+Just playing around with clean architecture, see Acknowledgement below.
+
+# Task
+A REST service to simulate robot moving and recording the number of the unique places visited by the robot. Written in C#.
+
+Example instruction: 
+```json
+{
+    "start": {
+        "x": 10,
+        "y": 22
+    },
+    "commmands": [
+        {
+            "direction": "east",
+            "steps": 5
+        },
+        {
+            "direction": "north",
+            "steps": 3
+        },
+        {
+            "direction": "west",
+            "steps": 2
+        }
+    ]
+}
+```
+
+Example response: 
+```json
+{
+    "id": 23,
+    "timestamp": "2023-10-18T09:29:56.2380207Z",
+    "commands": 10584,
+    "result": 318243,
+    "duration": 0.1868691
+}
+```
+
+Expected result should be stored in a relational database table:
+| id | timestamp | commmands | result | duration |
+| --- | ----------- | ----- | ------- | --------- |
+| 1234 | 2018-05-12 12:45:10.851596 +02:00 | 2 | 4 | 0.000123 |
+
+
+# Acknoledgements
+Based on the work presented in https://github.com/jasontaylordev/CleanArchitecture
+
+Adhering to Clean Architecture principles for developing software.
 
 The project was generated using the [Clean.Architecture.Solution.Template](https://github.com/jasontaylordev/RoboSimulator) version 8.0.0-preview.7.2.
 
@@ -17,34 +67,6 @@ dotnet watch run
 
 Navigate to https://localhost:5001. The application will automatically reload if you change any of the source files.
 
-## Code Styles & Formatting
-
-The template includes [EditorConfig](https://editorconfig.org/) support to help maintain consistent coding styles for multiple developers working on the same project across various editors and IDEs. The **.editorconfig** file defines the coding styles applicable to this solution.
-
-## Code Scaffolding
-
-The template includes support to scaffold new commands and queries.
-
-Start in the `.\src\Application\` folder.
-
-Create a new command:
-
-```
-dotnet new ca-usecase --name CreateTodoList --feature-name TodoLists --usecase-type command --return-type int
-```
-
-Create a new query:
-
-```
-dotnet new ca-usecase -n GetTodos -fn TodoLists -ut query -rt TodosVm
-```
-
-If you encounter the error *"No templates or subcommands found matching: 'ca-usecase'."*, install the template and try again:
-
-```bash
-dotnet new install Clean.Architecture.Solution.Template::8.0.0-preview.7.2
-```
-
 ## Test
 
 The solution contains unit, integration, and functional tests.
@@ -53,6 +75,3 @@ To run the tests:
 ```bash
 dotnet test
 ```
-
-## Help
-To learn more about the template go to the [project website](https://github.com/JasonTaylorDev/RoboSimulator). Here you can find additional guidance, request new features, report a bug, and discuss the template with other users.
