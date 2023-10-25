@@ -3,10 +3,7 @@
   <PropertyGroup>
     <RootNamespace>RoboSimulator.Domain</RootNamespace>
     <AssemblyName>RoboSimulator.Domain</AssemblyName>
+    <TargetFramework>net8.0</TargetFramework>
   </PropertyGroup>
-
-  <ItemGroup>
-    <PackageReference Include="MediatR" />
-  </ItemGroup>
 
 </Project>

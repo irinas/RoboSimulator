@@ -3,6 +3,7 @@
     <PropertyGroup>
         <RootNamespace>RoboSimulator.Application.UnitTests</RootNamespace>
         <AssemblyName>RoboSimulator.Application.UnitTests</AssemblyName>
+        <TargetFramework>net8.0</TargetFramework>
     </PropertyGroup>
 
     <ItemGroup>
@@ -14,8 +15,6 @@
         </PackageReference>
         <PackageReference Include="NUnit3TestAdapter" />
         <PackageReference Include="coverlet.collector" />
-        <PackageReference Include="FluentAssertions" />
-        <PackageReference Include="Moq" />
     </ItemGroup>
 
     <ItemGroup>
