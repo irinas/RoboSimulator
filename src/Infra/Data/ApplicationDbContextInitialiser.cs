@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 
-namespace RoboSimulator.Infrastructure.Data;
+namespace RoboSimulator.Infra.Data;
 public static class InitialiserExtensions
 {
     public static async Task InitialiseDatabaseAsync(this WebApplication app)
@@ -31,7 +31,9 @@ public class ApplicationDbContextInitialiser
     {
         try
         {
-            await _context.Database.MigrateAsync();
+            _logger.LogInformation("Applyind DB changes...");
+            await _context.Database.EnsureCreatedAsync();
+            _logger.LogInformation("DB changes applied successfully.");
         }
         catch (Exception ex)
         {

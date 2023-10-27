@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using RoboSimulator.Domain.Entities;
 
-namespace RoboSimulator.Infrastructure.Data.Configurations;
+namespace RoboSimulator.Infra.Data.Configurations;
 public class ExecutionConfiguration : IEntityTypeConfiguration<Execution>
 {
     public void Configure(EntityTypeBuilder<Execution> builder)

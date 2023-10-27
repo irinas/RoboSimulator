@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using RoboSimulator.Infrastructure.Data;
+using RoboSimulator.Infra.Data;
 using ZymLabs.NSwag.FluentValidation;
 
 namespace Microsoft.Extensions.DependencyInjection;

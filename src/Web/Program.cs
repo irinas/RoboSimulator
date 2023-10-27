@@ -1,4 +1,4 @@
-using RoboSimulator.Infrastructure.Data;
+using RoboSimulator.Infra.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 

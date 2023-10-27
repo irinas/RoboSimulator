@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using RoboSimulator.Application.Common.Interfaces;
 using RoboSimulator.Domain.Entities;
 
-namespace RoboSimulator.Infrastructure.Data;
+namespace RoboSimulator.Infra.Data;
 public class ApplicationDbContext : DbContext, IApplicationDbContext
 {
     public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }

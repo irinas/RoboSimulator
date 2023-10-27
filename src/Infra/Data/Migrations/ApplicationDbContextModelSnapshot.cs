@@ -3,20 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
-using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using RoboSimulator.Infrastructure.Data;
+using RoboSimulator.Infra.Data;
 
 #nullable disable
 
-namespace RoboSimulator.Infrastructure.Migrations
+namespace RoboSimulator.Infra.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20231017221346_InitialCreate")]
-    partial class InitialCreate
+    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
     {
-        /// <inheritdoc />
-        protected override void BuildTargetModel(ModelBuilder modelBuilder)
+        protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

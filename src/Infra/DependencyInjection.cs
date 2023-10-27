@@ -1,9 +1,11 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Logging;
 using RoboSimulator.Application.Common.Interfaces;
-using RoboSimulator.Infrastructure.Data;
+using RoboSimulator.Infra.Data;
 
 namespace Microsoft.Extensions.DependencyInjection;
+
 public static class DependencyInjection
 {
     public static IServiceCollection AddInfrastructureServices(this IServiceCollection services, IConfiguration configuration)
@@ -19,7 +21,7 @@ public static class DependencyInjection
 
         services.AddScoped<IApplicationDbContext>(provider => provider.GetRequiredService<ApplicationDbContext>());
         services.AddScoped<ApplicationDbContextInitialiser>();
-        
+
         return services;
     }
 }
